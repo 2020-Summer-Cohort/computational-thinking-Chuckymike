@@ -129,7 +129,25 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("EVEN OR ODD?\n");
 
             // Enter your solution here
+            Console.WriteLine("Pick a number");
+            string numberAsString = Console.ReadLine();
+            int number = Convert.ToInt32(numberAsString);
+            bool isEven = ((number % 2) == 0);
+            Console.WriteLine(isEven);
 
+            if (isEven)
+            {
+                Console.WriteLine("Even");
+             
+
+
+            }
+            else
+            {
+                Console.WriteLine("Odd");
+
+                
+            }
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -143,6 +161,20 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("VOWEL OR CONSONANT?\n");
 
             // Enter your solution here
+            Console.WriteLine("Is your letter a vowel or consonant?");
+            string letter = Console.ReadLine();
+            string vowel = "a e i o u y";
+            bool aVowel = vowel.Contains(letter);
+            //Console.WriteLine(aVowel);
+            if (aVowel)
+            {
+                Console.WriteLine("This letter is a vowel");
+            }
+            else
+            {
+                Console.WriteLine("This letter is a consonant");
+            }
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
