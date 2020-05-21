@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 
 namespace ComputationalThinkingExercises
 {
@@ -189,9 +190,40 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("FIND THE LARGEST NUMBER\n");
 
             // Enter your solution here
+            Console.WriteLine("Pick a number ");
+            string firstNumber = Console.ReadLine();
+            int number1 = Convert.ToInt32(firstNumber);
+            Console.WriteLine("Pick a second number ");
+            string secondNumber = Console.ReadLine();
+            int number2 = Convert.ToInt32(secondNumber);
+            
+            if (number1 > number2)
+            {
+            Console.WriteLine(number1 + " is the largest");
+                Console.ReadLine();
+            }
+            else if (number1 == number2)
+            {
+                Console.WriteLine("They're Equal");
 
-            Console.Write("Press enter to return to the Main Menu");
-            Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine(number2);
+
+            }
+
+
+            
+
+
+
+
+            
+          
+
+            
+            
         }
 
         static void DivisibleBy3()
@@ -202,6 +234,22 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("DIVISIBLE BY 3\n");
 
             // Enter your solution here
+            Console.WriteLine("\nEnter a number");
+            string userNumber = Console.ReadLine();
+            int num = Convert.ToInt32(userNumber);
+            bool number1 = num % 3 == 0;
+            if (number1)
+            {
+                Console.WriteLine("This number is divisible by 3");
+                Console.ReadLine();
+            }
+            else 
+            {
+                Console.WriteLine("This number is not divisible by 3");
+                Console.ReadLine();
+            }
+            
+            
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -223,6 +271,33 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("RESTAURANT BILL\n");
 
             // Enter your solution here
+            Console.WriteLine("How many people are dining?");
+            string numberOfPeople = Console.ReadLine();
+            int number = Convert.ToInt32(numberOfPeople);
+            Console.WriteLine("What is the cost per person?");
+            string costPerPerson = Console.ReadLine();
+            int number2 = Convert.ToInt32(costPerPerson);
+            int total = number * number2;
+            Console.WriteLine(total + " is your total bill");
+
+            if (total >= 50)
+            {
+                Console.WriteLine("You get 10% discount :)");
+            }
+            else
+            {
+                Console.WriteLine("You get a 5% discount :/");
+            }
+            Console.ReadLine();
+
+
+
+            
+            
+
+
+
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -249,8 +324,45 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("AGE CATEGORY\n");
 
             // Enter your solution here
+            Console.Write("Enter you age: ");
+            int userAge = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Press enter to return to the Main Menu");
+            if (userAge <= 2 && userAge >= 0)
+            {
+                Console.WriteLine("Still in mamas arms");
+            }
+            else if (userAge <= 4 && userAge >= 3)
+            {
+                Console.WriteLine("Preschool maniac");
+            }
+            else if (userAge >= 5 && userAge <= 11)
+            {
+                Console.WriteLine("Elemantary School");
+            }
+            else if (userAge >= 12 && userAge <= 14)
+            {
+                Console.WriteLine("Middle School");
+            }
+            else if (userAge >=15 && userAge <= 18)
+            {
+                Console.WriteLine("High School");
+            }
+            else if (userAge >=19 && userAge <= 22)
+            {
+                Console.WriteLine("College");
+            }
+            else if (userAge >= 23 && userAge <= 65)
+            {
+                Console.WriteLine("Working for the man");
+            }
+            else if (userAge >= 66 && userAge <= 100)
+            {
+                Console.WriteLine("Golden years");
+            }
+            else  Console.WriteLine("this program is for humans");
+            
+            
+                Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
 
